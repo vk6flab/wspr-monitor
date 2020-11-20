@@ -1,4 +1,4 @@
-#wspr-monitor
+# wspr-monitor
 
 This project creates a stand-alone WSPR monitoring beacon using an RTL-SDR dongle and a Raspberry Pi.
 
