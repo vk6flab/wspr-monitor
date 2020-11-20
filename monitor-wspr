@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while true ; do
+	sudo /usr/bin/sntp -s au.pool.ntp.org
+	shuf /home/pi/frequencies | while read freq ; do
+		timeout -s SIGINT 15m /home/pi/bin/start-wsprd ${freq}
+	done
+done
