@@ -15,3 +15,6 @@ You'll need:
 Feel free to get in touch or log issues.
 
 Onno VK6FLAB, cq@vk6flab.com
+
+## Changelog
+2022-01-21 - Added upconverter support.

@@ -1,0 +1,15 @@
+#!/bin/bash
+date -R 
+
+if [ $# -eq 0 ] ; then
+	freq=14.0956
+else
+	freq=$1
+fi
+
+if [ "${freq}" = "$(echo -e "${freq}\n60" | sort -g | head -1)" ]
+then
+	rtlsdr_wsprd -f ${freq}M -c VK6FLAB -l OF78WC -u 120M -a 1 -S
+else
+	echo "Frequency: ${freq}M is out of upconverter range."
+fi
